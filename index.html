@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Order summary card</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // Primary
+              "pale-blue": "hsl(225, 100%, 94%)",
+              "bright-blue": "hsl(245, 75%, 52%)",
+
+              // Neutral
+              "very-pale-blue": "hsl(225, 100%, 98%)",
+              "desaturated-blue": "hsl(224, 23%, 55%)",
+              "dark-blue": "hsl(223, 47%, 23%)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <main
+      class="min-h-screen bg-[url('assets/images/pattern-background-desktop.svg')] bg-no-repeat bg-pale-blue flex justify-center items-center"
+    >
+      <div class="bg-white w-[450px] rounded-2xl m-4">
+        <img
+          src="./assets/images/illustration-hero.svg"
+          alt="illustration-hero"
+          class="rounded-t-2xl"
+        />
+        <div
+          class="py-8 sm:py-11 px-8 sm:px-10 flex flex-col items-center gap-y-5 sm:gap-y-6"
+        >
+          <h1 class="text-2xl text-dark-blue font-bold">Order Summary</h1>
+          <span
+            class="text-center text-sm sm:text-base font-medium text-desaturated-blue w-[90%]"
+            >You can now listen to millions of songs, audiobooks, and podcasts
+            on any device anywhere you like!</span
+          >
+          <div
+            class="flex gap-x-4 items-center bg-very-pale-blue px-5 py-6 rounded-lg w-full"
+          >
+            <img
+              class="w-10"
+              src="./assets/images/icon-music.svg"
+              alt="icon-music"
+            />
+            <div class="flex flex-col flex-grow">
+              <span class="font-bold text-dark-blue">Annual Plan</span>
+              <span class="text-desaturated-blue">$59.99/year</span>
+            </div>
+            <span
+              class="text-bright-blue text-sm font-bold underline cursor-pointer hover:text-bright-blue/75 hover:no-underline transition duration-300"
+              >Change</span
+            >
+          </div>
+          <button
+            class="bg-bright-blue text-white font-semibold p-3 shadow-2xl rounded-lg w-full hover:bg-bright-blue/75 transition duration-300"
+          >
+            Proceed to Payment
+          </button>
+          <button
+            class="font-semibold text-desaturated-blue hover:text-dark-blue transition duration-300"
+          >
+            Cancel Order
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
